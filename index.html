@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pizza — Your Delicious Pizza Starts Here</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;500;600;700;800;900&family=Outfit:wght@500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="font-poppins">
+  <!-- NAVBAR (sticky) -->
+  <nav class="navbar flex items-center justify-between">
+    <a href="#home" class="logo-link">
+      <img src="images/logo.webp" alt="Pizza Tabrabane Tarneit" class="logo-img" />
+    </a>
+
+    <ul class="hidden md:flex items-center gap-8 text-slate-700 font-medium">
+      <li><a href="#home" class="nav-link">Home</a></li>
+      <li><a href="#menu" class="nav-link">Menu</a></li>
+      <li><a href="#deals" class="nav-link">Deals</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+    </ul>
+
+    <div class="flex items-center">
+      <button class="order-now-btn">
+        <i data-lucide="shopping-bag"></i>
+        <span>Order Now</span>
+      </button>
+    </div>
+  </nav>
+
+  <main class="w-full">
+    <section id="home" class="hero-card relative w-full bg-white overflow-hidden">
+
+      <!-- ORANGE GRADIENT GLOW -->
+      <div class="hero-glow" aria-hidden="true">
+        <span class="glow glow-1"></span>
+        <span class="glow glow-2"></span>
+        <span class="glow glow-3"></span>
+      </div>
+
+
+      <!-- HERO -->
+      <div class="relative z-10 px-6 md:px-12 pt-2 md:pt-4 pb-0 text-center">
+        <h1
+          class="hero-title text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-slate-900 leading-tight tracking-tight"
+        >
+          A Slice of Italy,<br />Crafted with Love.
+        </h1>
+
+        <p class="hero-sub mt-5 max-w-xl mx-auto text-slate-500 text-sm md:text-base">
+          Hand-tossed daily with imported Italian flour, slow-simmered sauce,
+          and the freshest local toppings — right here in Tarneit.
+        </p>
+
+        <button class="cta-btn mt-8 inline-flex items-center justify-center px-8 py-3 rounded-full text-white font-medium transition">
+          View Our Menu
+        </button>
+      </div>
+
+      <!-- FLOATING INGREDIENTS -->
+      <div class="ingredients pointer-events-none">
+        <span class="ing ing-basil-1" data-from="left">🌿</span>
+        <span class="ing ing-basil-2" data-from="right">🌿</span>
+        <span class="ing ing-tomato-1" data-from="top-right">🍅</span>
+        <span class="ing ing-tomato-2" data-from="bottom-left">🍅</span>
+        <span class="ing ing-olive-1" data-from="left">🫒</span>
+        <span class="ing ing-olive-2" data-from="right">🫒</span>
+        <span class="ing ing-chilli" data-from="bottom-left">🌶️</span>
+        <span class="ing ing-mushroom" data-from="right">🍄</span>
+      </div>
+
+      <!-- PIZZA CAROUSEL -->
+      <div class="pizza-stage relative">
+        <div class="pizza-track" id="pizzaTrack">
+          <div class="pizza-slide is-active">
+            <img src="images/156.webp" alt="Pizza" class="pizza-img" loading="eager" />
+          </div>
+          <div class="pizza-slide">
+            <img src="images/157.webp" alt="Pizza" class="pizza-img" loading="lazy" />
+          </div>
+          <div class="pizza-slide">
+            <img src="images/158.webp" alt="Pizza" class="pizza-img" loading="lazy" />
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========== MENU SECTION ========== -->
+    <section id="menu" class="menu-section">
+      <div class="container mx-auto px-6 md:px-12">
+        <h2 class="section-title">EXPLORE OUR MENU</h2>
+        <div class="title-underline"></div>
+
+        <div class="categories-grid">
+          <a href="#" class="category-card">
+            <div class="category-img-wrap">
+              <img src="images/categories/traditional.webp" alt="Traditional Pizza" />
+            </div>
+            <span class="category-label">Traditional Pizza</span>
+          </a>
+          <a href="#" class="category-card">
+            <div class="category-img-wrap">
+              <img src="images/categories/special%20pizza.webp" alt="Special Gourmet" />
+            </div>
+            <span class="category-label">Special Gourmet</span>
+          </a>
+          <a href="#" class="category-card">
+            <div class="category-img-wrap">
+              <img src="images/categories/main%20course.webp" alt="Main Course" />
+            </div>
+            <span class="category-label">Main Course</span>
+          </a>
+          <a href="#" class="category-card">
+            <div class="category-img-wrap">
+              <img src="images/categories/gourmet.webp" alt="Gourmet" />
+            </div>
+            <span class="category-label">Gourmet</span>
+          </a>
+          <a href="#" class="category-card">
+            <div class="category-img-wrap">
+              <img src="images/categories/pasta.webp" alt="Pasta" />
+            </div>
+            <span class="category-label">Pasta</span>
+          </a>
+          <a href="#" class="category-card">
+            <div class="category-img-wrap">
+              <img src="images/categories/burger.webp" alt="Burger" />
+            </div>
+            <span class="category-label">Burger</span>
+          </a>
+        </div>
+
+        <!-- DEALS GRID -->
+        <div id="deals" class="deals-grid">
+          <a href="#" class="deal-card deal-1 reveal">
+            <img src="images/deals/deal%201.webp" alt="Deal One" />
+            <span class="deal-shine"></span>
+          </a>
+          <a href="#" class="deal-card deal-2 reveal">
+            <img src="images/deals/deal%202.webp" alt="Deal Two" />
+            <span class="deal-shine"></span>
+          </a>
+          <a href="#" class="deal-card deal-3 reveal">
+            <img src="images/deals/deal%20three.webp" alt="Deal Three" />
+            <span class="deal-shine"></span>
+          </a>
+          <a href="#" class="deal-card deal-4 reveal">
+            <img src="images/deals/deal%204.webp" alt="Deal Four" />
+            <span class="deal-shine"></span>
+          </a>
+          <a href="#" class="deal-card deal-5 reveal">
+            <img src="images/deals/deal%20five.webp" alt="Deal Five" />
+            <span class="deal-shine"></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== BEST SELLERS ========== -->
+    <section class="bestsellers-section">
+      <div class="container mx-auto px-6 md:px-12">
+        <h2 class="section-title">OUR BEST SELLER ITEMS</h2>
+        <div class="title-underline"></div>
+
+        <div class="bestsellers-grid">
+          <article class="bestseller-card">
+            <div class="bestseller-img-wrap">
+              <img src="images/categories/traditional.webp" alt="Peri Peri Chicken Pizza" />
+            </div>
+            <h3 class="bestseller-title">PERI PERI CHICKEN PIZZA</h3>
+            <p class="bestseller-desc">
+              Peri Peri Marinated Chicken, Mushroom, Capsicum, Onion, Topped with Peri Peri Mayo
+            </p>
+            <div class="bestseller-price">$20.50</div>
+            <button class="bestseller-view">
+              <i data-lucide="eye"></i>
+              <span>VIEW</span>
+            </button>
+          </article>
+
+          <article class="bestseller-card">
+            <div class="bestseller-img-wrap">
+              <img src="images/categories/special%20pizza.webp" alt="Special Chicken 65" />
+            </div>
+            <h3 class="bestseller-title">SPECIAL CHICKEN 65</h3>
+            <p class="bestseller-desc">
+              Marinated Chicken 65, Capsicum, Mushroom, Red Onion, Jalapenos, Topped with Special Garlic Sauce
+            </p>
+            <div class="bestseller-price">$20.50</div>
+            <button class="bestseller-view">
+              <i data-lucide="eye"></i>
+              <span>VIEW</span>
+            </button>
+          </article>
+
+          <article class="bestseller-card">
+            <div class="bestseller-img-wrap">
+              <img src="images/categories/gourmet.webp" alt="Chicken Tandoori" />
+            </div>
+            <h3 class="bestseller-title">CHICKEN TANDOORI</h3>
+            <p class="bestseller-desc">
+              Shredded Tandoori Chicken, Red Onion, Capsicum, Baby Spinach, Topped With Yogurt Sauce
+            </p>
+            <div class="bestseller-price">
+              $12.99 <span class="price-sep">-</span> $19.99
+            </div>
+            <button class="bestseller-view">
+              <i data-lucide="eye"></i>
+              <span>VIEW</span>
+            </button>
+          </article>
+
+          <article class="bestseller-card">
+            <div class="bestseller-img-wrap">
+              <img src="images/categories/main%20course.webp" alt="Veggie Delight" />
+            </div>
+            <h3 class="bestseller-title">VEGGIE DELIGHT</h3>
+            <p class="bestseller-desc">
+              Olives, Pineapple, Capsicum, Onions, Herbs, Jalapenos with Pesto &amp; Mayo Sauce
+            </p>
+            <div class="bestseller-price">
+              $12.99 <span class="price-sep">-</span> $17.99
+            </div>
+            <button class="bestseller-view">
+              <i data-lucide="eye"></i>
+              <span>VIEW</span>
+            </button>
+          </article>
+        </div>
+
+        <div class="view-all-wrap">
+          <button class="view-all-btn">VIEW ALL ITEMS</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== DELIVERY ========== -->
+    <section class="delivery-section">
+      <svg class="wave wave-top" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0,40 C240,90 480,0 720,30 C960,60 1200,10 1440,50 L1440,0 L0,0 Z" fill="#ffffff"/>
+      </svg>
+
+      <div class="delivery-blobs" aria-hidden="true">
+        <span class="blob b1"></span>
+        <span class="blob b2"></span>
+        <span class="blob b3"></span>
+      </div>
+
+      <div class="container mx-auto px-6 md:px-12 delivery-grid">
+        <div class="delivery-text reveal">
+          <p class="delivery-eyebrow">Fast. Free. Fresh.</p>
+          <h2 class="delivery-title">Free Delivery<br />within 8 kms</h2>
+          <p class="delivery-desc">
+            Craving something delicious? We've got you covered with free home
+            delivery within 8 km — bringing you our full menu of freshly made
+            pizzas, burgers, pasta, treats &amp; drinks
+          </p>
+
+          <div class="delivery-areas">
+            <h3 class="delivery-areas-title">Delivery Areas</h3>
+            <ul class="delivery-areas-list">
+              <li><i data-lucide="map-pin"></i><span>Tarneit</span></li>
+              <li><i data-lucide="map-pin"></i><span>Truganina</span></li>
+              <li><i data-lucide="map-pin"></i><span>Werribee</span></li>
+              <li><i data-lucide="map-pin"></i><span>Hopper's Crossing</span></li>
+              <li><i data-lucide="map-pin"></i><span>Wyndham Vale</span></li>
+              <li><i data-lucide="map-pin"></i><span>Williams Landing</span></li>
+            </ul>
+          </div>
+
+          <button class="delivery-btn">VIEW ALL ITEMS</button>
+        </div>
+
+        <div class="delivery-visual reveal">
+          <svg class="brush-ring" viewBox="0 0 400 400" fill="none" aria-hidden="true">
+            <ellipse cx="200" cy="200" rx="178" ry="172"
+              stroke="white" stroke-width="14"
+              stroke-linecap="round"
+              stroke-dasharray="120 10 70 6 140 8 50 12 90 9"
+              transform="rotate(-18 200 200)"
+              opacity="0.92" />
+          </svg>
+
+          <img src="images/delivery-man.webp" alt="Delivery man" class="delivery-man" />
+
+          <div class="bubble bubble-food">
+            <span class="bubble-emoji">🍔</span>
+            <p><strong>Fresh &amp; delicious</strong> food<br />at your doorstep</p>
+          </div>
+
+          <div class="bubble bubble-time">
+            <i data-lucide="timer"></i>
+            <p><strong>Free Home Delivery</strong><br />within 8 kms</p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ========== ABOUT US ========== -->
+    <section id="about" class="about-section">
+      <div class="container mx-auto px-6 md:px-12">
+        <div class="about-grid">
+          <div class="about-video reveal">
+            <div class="about-video-frame">
+              <img src="images/store.webp" alt="Pizza Tabrabane store" class="about-store-img" />
+              <span class="about-video-tag">
+                <i data-lucide="utensils"></i>
+                Crafted Daily
+              </span>
+              <span class="about-floating-card">
+                <i data-lucide="map-pin"></i>
+                <div>
+                  <strong>Visit Us</strong>
+                  <span>652 Tarneit Road</span>
+                </div>
+              </span>
+            </div>
+          </div>
+
+          <div class="about-text reveal">
+            <p class="about-eyebrow">Our Story</p>
+            <h2 class="about-title">About <span>Us</span></h2>
+
+            <p class="about-para">
+              At <strong>Pizza Tabrabane</strong>, we're passionate about
+              bringing you the most authentic Italian pizza experience this
+              side of Italy. Our dough is made fresh daily with imported
+              Italian flour, and our signature tomato sauce is simmered slowly
+              with fresh herbs — every pizza is crafted from the freshest,
+              highest-quality ingredients.
+            </p>
+
+            <p class="about-para">
+              We believe pizza is more than a meal — it's a way to connect with
+              loved ones and create lasting memories. Proudly part of the
+              Tarneit community, we work with local farmers and businesses to
+              bring you warm hospitality and a welcoming atmosphere.
+            </p>
+
+            <p class="about-para about-tagline">
+              Come visit us and taste the heart of Italy.
+            </p>
+
+            <div class="about-stats">
+              <div class="about-stat">
+                <span class="about-stat-num counter" data-target="10" data-suffix="+">0</span>
+                <span class="about-stat-label">Years of Craft</span>
+              </div>
+              <div class="about-stat">
+                <span class="about-stat-num counter" data-target="100" data-suffix="%">0</span>
+                <span class="about-stat-label">Fresh Ingredients</span>
+              </div>
+              <div class="about-stat">
+                <span class="about-stat-num counter" data-target="5" data-suffix="★">0</span>
+                <span class="about-stat-label">Local Favourite</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== TESTIMONIALS ========== -->
+    <section class="testimonials-section">
+      <div class="container mx-auto px-6 md:px-12">
+        <h2 class="section-title">LOVED BY LOCALS</h2>
+        <div class="title-underline"></div>
+
+        <div class="testimonials-slider" id="testimonialsSlider">
+          <button class="t-arrow t-prev" aria-label="Previous testimonial">
+            <i data-lucide="chevron-left"></i>
+          </button>
+
+          <div class="testimonials-track" id="testimonialsTrack">
+            <article class="t-card is-active">
+              <i data-lucide="quote" class="t-quote"></i>
+              <p class="t-text">
+                Best pizza in Tarneit, hands down. The base is perfectly crisp,
+                the sauce tastes like it's straight out of Italy. Delivery was
+                quick and the staff are so friendly!
+              </p>
+              <div class="t-stars">★★★★★</div>
+              <div class="t-author">
+                <div class="t-avatar" style="background:#fde2c2;color:#c84a13">SK</div>
+                <div>
+                  <div class="t-name">Sarah K.</div>
+                  <div class="t-role">Tarneit local</div>
+                </div>
+              </div>
+            </article>
+
+            <article class="t-card">
+              <i data-lucide="quote" class="t-quote"></i>
+              <p class="t-text">
+                Tried the Peri Peri Chicken — absolute flavour bomb. Fresh
+                ingredients you can actually taste. This is our new Friday
+                night ritual.
+              </p>
+              <div class="t-stars">★★★★★</div>
+              <div class="t-author">
+                <div class="t-avatar" style="background:#dbeafe;color:#1d4ed8">RJ</div>
+                <div>
+                  <div class="t-name">Rohit J.</div>
+                  <div class="t-role">Truganina</div>
+                </div>
+              </div>
+            </article>
+
+            <article class="t-card">
+              <i data-lucide="quote" class="t-quote"></i>
+              <p class="t-text">
+                Ordered the family deal and everyone loved it. The garlic bread
+                was unreal. So good to find authentic Italian quality in our
+                neighbourhood.
+              </p>
+              <div class="t-stars">★★★★★</div>
+              <div class="t-author">
+                <div class="t-avatar" style="background:#dcfce7;color:#166534">EM</div>
+                <div>
+                  <div class="t-name">Emma M.</div>
+                  <div class="t-role">Werribee</div>
+                </div>
+              </div>
+            </article>
+
+            <article class="t-card">
+              <i data-lucide="quote" class="t-quote"></i>
+              <p class="t-text">
+                The Tandoori pizza is something else — perfect blend of Indian
+                spice and Italian craft. The team here genuinely care about
+                what they serve.
+              </p>
+              <div class="t-stars">★★★★★</div>
+              <div class="t-author">
+                <div class="t-avatar" style="background:#fef3c7;color:#a16207">PA</div>
+                <div>
+                  <div class="t-name">Priya A.</div>
+                  <div class="t-role">Hopper's Crossing</div>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <button class="t-arrow t-next" aria-label="Next testimonial">
+            <i data-lucide="chevron-right"></i>
+          </button>
+        </div>
+
+        <div class="t-dots" id="testimonialsDots"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="container mx-auto px-6 md:px-12">
+      <div class="footer-grid">
+        <div class="footer-col footer-brand">
+          <img src="images/logo.webp" alt="Pizza Tabrabane Tarneit" class="footer-logo" />
+          <p class="footer-name">Pizza Tabrabane — Tarneit</p>
+          <p class="footer-address">
+            <i data-lucide="map-pin"></i>
+            <span>652 Tarneit Road, Tarneit 3029</span>
+          </p>
+          <a href="#" class="footer-cta">
+            <i data-lucide="shopping-bag"></i>
+            Order Now
+          </a>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Powered by</h4>
+          <p class="footer-tagline">
+            Drive more online orders for pickup and delivery.
+          </p>
+          <div class="footer-socials">
+            <a href="#" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+            <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+            <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2025 Pizza Tabrabane. All rights reserved.</p>
+        <p>Made with <span style="color:#ea5a1f">♥</span> in Tarneit</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>

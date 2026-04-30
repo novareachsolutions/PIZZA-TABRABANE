@@ -1,0 +1,19 @@
+# macOS
+.DS_Store
+
+# Editor
+.vscode/
+
+# Heavy original sources — we ship WebPs
+images/156.png
+images/157.png
+images/158.png
+images/store.png
+images/logo.png
+images/devlivery man.png
+images/delivery-man-cut.png
+images/categories/*.png
+images/deals/*.png
+
+# Node (if added later)
+node_modules/
