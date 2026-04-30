@@ -117,6 +117,7 @@ body {
   letter-spacing: 0.4px;
   line-height: 1;
   cursor: pointer;
+  text-decoration: none;
   box-shadow: 0 6px 14px rgba(234, 90, 31, 0.32);
   transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -254,6 +255,7 @@ body {
 }
 .cta-btn {
   background: var(--brand);
+  text-decoration: none;
   box-shadow: 0 10px 22px rgba(234, 90, 31, 0.32);
   opacity: 0;
   transform: translateY(14px) scale(0.95);
